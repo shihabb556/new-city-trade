@@ -4,8 +4,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300 ease-in-out h-20">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
-        <div className="text-[10px] sm:text-xs md:text-sm font-extrabold text-[#1B365D] dark:text-white uppercase tracking-wider font-headline">
-          NCT New City Trade
+        <div className="flex flex-col leading-none group cursor-pointer">
+          <span className="text-2xl sm:text-3xl font-black text-primary dark:text-white tracking-tighter transition-colors group-hover:text-on-tertiary-container">
+            NCT
+          </span>
+          <span className="text-[8px] sm:text-[10px] font-bold text-on-tertiary-container dark:text-on-tertiary-container/80 uppercase tracking-[0.25em] ml-0.5">
+            New City Trade
+          </span>
         </div>
         <div className="hidden md:flex items-center space-x-8">
           <a
