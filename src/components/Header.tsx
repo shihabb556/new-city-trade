@@ -1,10 +1,10 @@
-import React from 'react';
+
 
 const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300 ease-in-out h-20">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
-        <div className="text-xl font-extrabold text-[#1B365D] dark:text-white uppercase tracking-wider font-headline">
+        <div className="text-[10px] sm:text-xs md:text-sm font-extrabold text-[#1B365D] dark:text-white uppercase tracking-wider font-headline">
           NCT New City Trade
         </div>
         <div className="hidden md:flex items-center space-x-8">
@@ -39,7 +39,7 @@ const Header = () => {
             Contact
           </a>
         </div>
-        <button className="industrial-gradient text-white px-6 py-2.5 rounded-lg font-bold transition-transform scale-98 active:scale-95 hover:opacity-90">
+        <button className="industrial-gradient text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-bold transition-transform scale-98 active:scale-95 hover:opacity-90 text-xs sm:text-sm">
           Get Quote
         </button>
       </nav>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const faqData = [
   {
@@ -33,7 +33,7 @@ const FAQ = () => {
           <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Support
           </h2>
-          <h3 className="text-4xl font-headline font-bold text-primary">Frequently Asked Questions</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">Frequently Asked Questions</h3>
         </div>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
@@ -42,7 +42,7 @@ const FAQ = () => {
                 className="w-full px-8 py-6 text-left flex justify-between items-center group"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-bold text-primary">{faq.question}</span>
+                <span className="font-bold text-primary text-sm sm:text-base">{faq.question}</span>
                 <span
                   className={`material-symbols-outlined text-primary transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
                 >
@@ -50,7 +50,7 @@ const FAQ = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="px-8 pb-6 text-secondary text-sm leading-relaxed border-t border-surface-container pt-4">
+                <div className="px-8 pb-6 text-secondary text-xs sm:text-sm leading-relaxed border-t border-surface-container pt-4">
                   {faq.answer}
                 </div>
               )}

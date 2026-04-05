@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const servicesData = [
   {
@@ -41,7 +41,7 @@ const Services = () => {
           <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Expertise
           </h2>
-          <h3 className="text-4xl font-headline font-bold text-primary">Comprehensive Supply Solutions</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">Comprehensive Supply Solutions</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
@@ -57,8 +57,8 @@ const Services = () => {
                   {service.icon}
                 </span>
               </div>
-              <h4 className="text-xl font-bold text-primary mb-3">{service.title}</h4>
-              <p className="text-secondary text-sm leading-relaxed">{service.description}</p>
+              <h4 className="text-lg sm:text-xl font-bold text-primary mb-3">{service.title}</h4>
+              <p className="text-secondary text-xs sm:text-sm leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

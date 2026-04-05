@@ -1,14 +1,14 @@
-import React from 'react';
+
 
 const Footer = () => {
   return (
     <footer className="bg-[#f0f3ff] dark:bg-slate-900 w-full py-12 px-8 font-['Inter'] text-sm leading-relaxed">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
         <div className="space-y-6">
-          <div className="text-lg font-bold text-[#1B365D] dark:text-white uppercase tracking-wider">
+          <div className="text-base sm:text-lg font-bold text-[#1B365D] dark:text-white uppercase tracking-wider">
             NCT New City Trade
           </div>
-          <p className="text-slate-500 dark:text-slate-400">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
             Bangladesh's premier B2B supplier for high-end construction materials and industrial grade hardware solutions.
           </p>
           <div className="flex gap-4">
@@ -108,23 +108,23 @@ const Footer = () => {
           <h5 className="text-[#1B365D] dark:text-white font-bold uppercase text-xs tracking-widest">
             Newsletter
           </h5>
-          <p className="text-slate-500 dark:text-slate-400">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
             Get the latest product updates and industrial insights.
           </p>
           <div className="flex">
             <input
-              className="flex-1 bg-surface-container-lowest border-none rounded-l-lg text-sm px-4 focus:ring-primary outline-none"
+              className="flex-1 bg-surface-container-lowest border-none rounded-l-lg text-xs sm:text-sm px-4 focus:ring-primary outline-none"
               placeholder="Your email"
               type="email"
             />
-            <button className="bg-[#1B365D] text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all font-bold">
+            <button className="bg-[#1B365D] text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-all font-bold text-xs sm:text-sm">
               Join
             </button>
           </div>
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-400 text-xs">
-        © 2024 NCT New City Trade Bangladesh. All rights reserved.
+        © 2026 NCT New City Trade Bangladesh. All rights reserved.
       </div>
     </footer>
   );

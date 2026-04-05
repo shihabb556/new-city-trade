@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Contact = () => {
   return (
@@ -10,10 +10,10 @@ const Contact = () => {
               <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
                 Contact Us
               </h2>
-              <h3 className="text-4xl font-headline font-bold text-primary mb-6">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary mb-6">
                 Let's Build Something Great Together
               </h3>
-              <p className="text-secondary leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-secondary leading-relaxed">
                 Our headquarters in Dhaka serve as the central hub for logistics and support. Reach out for technical inquiries or quote requests.
               </p>
             </div>
@@ -25,8 +25,8 @@ const Contact = () => {
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-primary">Visit Our Office</p>
-                  <p className="text-sm text-secondary">Plot 12, Road 4, Sector 7, Uttara, Dhaka - 1230, Bangladesh</p>
+                  <p className="font-bold text-primary text-sm sm:text-base">Visit Our Office</p>
+                  <p className="text-xs sm:text-sm text-secondary">Plot 12, Road 4, Sector 7, Uttara, Dhaka - 1230, Bangladesh</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -36,8 +36,8 @@ const Contact = () => {
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-primary">Call Us</p>
-                  <p className="text-sm text-secondary">
+                  <p className="font-bold text-primary text-sm sm:text-base">Call Us</p>
+                  <p className="text-xs sm:text-sm text-secondary">
                     +880 2 1234 5678<br />
                     +880 1711 000 000
                   </p>
@@ -50,8 +50,8 @@ const Contact = () => {
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-primary">Email Support</p>
-                  <p className="text-sm text-secondary">
+                  <p className="font-bold text-primary text-sm sm:text-base">Email Support</p>
+                  <p className="text-xs sm:text-sm text-secondary">
                     info@nctbangladesh.com<br />
                     sales@nctbangladesh.com
                   </p>
@@ -59,29 +59,30 @@ const Contact = () => {
               </div>
             </div>
             <div className="rounded-xl overflow-hidden h-[300px] shadow-sm">
-              <img
-                alt="Map Placeholder"
-                className="w-full h-full object-cover"
-                data-alt="Stylized map showing urban city grid of Dhaka, Bangladesh with an icon marking the office location"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYyZDxhFTJ1Lj0K4QOpb0Q--uE9TyjcJBZExL2S_JzcKOhYls8UQXTufagkz6nmA0yMheW9xWpvqCNGeuNUbLndYzqrrFxibr-cJdbStjnmY-uRf67aeXWugF-7SeCwsCHJByao2H2grLs5tmiyTgp_Usf6CWBGgkad0yfQ74w5kuigr3nD8ZTahflcwAIqcJt0D_iaNst9-9MdiHzrTaaggJduuJCKSdgT2PKo-yv73K6oDz96JWy_Ni4lXBdxD9f_PJ3_zLoFN9C"
-              />
+              <iframe
+                title="Office Location Map"
+                className="w-full h-full border-0"
+                src="https://maps.google.com/maps?q=Plot%2012,%20Road%204,%20Sector%207,%20Uttara,%20Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen={true}
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
           <div className="bg-surface-container-low p-10 rounded-xl shadow-sm">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-secondary">Full Name</label>
+                  <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-secondary">Full Name</label>
                   <input
-                    className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-sm outline-none"
+                    className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-xs sm:text-sm outline-none"
                     placeholder="John Doe"
                     type="text"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-secondary">Email Address</label>
+                  <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-secondary">Email Address</label>
                   <input
-                    className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-sm outline-none"
+                    className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-xs sm:text-sm outline-none"
                     placeholder="john@company.com"
                     type="email"
                   />
@@ -105,15 +106,15 @@ const Contact = () => {
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-secondary">Message</label>
+                <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-secondary">Message</label>
                 <textarea
-                  className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-sm outline-none"
+                  className="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 text-xs sm:text-sm outline-none"
                   placeholder="How can we help with your project?"
                   rows={4}
                 ></textarea>
               </div>
               <button
-                className="w-full industrial-gradient text-white font-bold py-4 rounded-lg transition-transform active:scale-95 shadow-lg shadow-primary/20"
+                className="w-full industrial-gradient text-white font-bold py-3 sm:py-4 rounded-lg transition-transform active:scale-95 shadow-lg shadow-primary/20 text-sm sm:text-base"
                 type="submit"
               >
                 Send Inquiry
