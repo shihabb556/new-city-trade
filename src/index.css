@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.tonal-layering-no-borders {
+  border: none !important;
+}
+
+.bg-shift-no-lines {
+  border: none !important;
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.industrial-gradient {
+  background: linear-gradient(135deg, #002046 0%, #1b365d 100%);
+}
