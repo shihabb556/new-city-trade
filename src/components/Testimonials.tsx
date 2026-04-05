@@ -1,6 +1,38 @@
+import { useEffect, useState } from 'react';
 
+const testimonialsData = [
+  {
+    quote: "NCT has been our primary hardware partner for the last five major residential projects. Their delivery speed and tool quality are unmatched in the Bangladesh market.",
+    author: "Project Lead",
+    company: "Elite Real Estate Group",
+    image: "/images/client/testimonial-1.png"
+  },
+  {
+    quote: "Finding reliable industrial-grade electrical components in bulk used to be a challenge until we started working with NCT New City Trade. Highly recommended.",
+    author: "Operations Head",
+    company: "Dhaka Construction Hub",
+    image: "/images/client/testimonial-2.png"
+  },
+  {
+    quote: "The technical support team at NCT is exceptional. They helped us specify the exact building materials needed for our high-rise project.",
+    author: "Chief Engineer",
+    company: "Navana Real Estate",
+    image: "/images/client/testimonial-1.png"
+  }
+];
+
+const clientLogos = ["SHANTA", "CONCORD", "NAVANA", "ASSURANCE", "BUILDING", "GLAXO", "BEXIMCO", "AKIJ"];
 
 const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonialsData.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-24 bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
@@ -10,50 +42,66 @@ const Testimonials = () => {
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">What Our Clients Say</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <div className="bg-surface-container-low p-8 rounded-xl relative">
-            <span
-              className="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-8"
-              data-icon="format_quote"
+
+        <div className="relative h-[400px] mb-20 flex items-center justify-center">
+          {testimonialsData.map((testimonial, idx) => (
+            <div
+              key={idx}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out transform flex items-center justify-center ${
+                idx === activeIndex 
+                  ? 'opacity-100 translate-x-0 scale-100' 
+                  : 'opacity-0 translate-x-12 scale-95 pointer-events-none'
+              }`}
             >
-              format_quote
-            </span>
-            <p className="text-base sm:text-lg text-primary font-medium leading-relaxed mb-6 italic">
-              "NCT has been our primary hardware partner for the last five major residential projects. Their delivery speed and tool quality are unmatched in the Bangladesh market."
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-slate-300"></div>
-              <div>
-                <p className="font-bold text-primary text-sm sm:text-base">Project Lead</p>
-                <p className="text-xs sm:text-sm text-secondary">Elite Real Estate Group</p>
+              <div className="max-w-3xl w-full bg-surface-container-low p-8 rounded-xl relative shadow-lg">
+                <span
+                  className="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-8"
+                  data-icon="format_quote"
+                >
+                  format_quote
+                </span>
+                <p className="text-base sm:text-lg text-primary font-medium leading-relaxed mb-8 italic">
+                  "{testimonial.quote}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.author} 
+                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20" 
+                  />
+                  <div>
+                    <p className="font-bold text-primary text-sm sm:text-base">{testimonial.author}</p>
+                    <p className="text-xs sm:text-sm text-secondary">{testimonial.company}</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="bg-surface-container-low p-8 rounded-xl relative">
-            <span
-              className="material-symbols-outlined text-6xl text-primary/10 absolute top-4 right-8"
-              data-icon="format_quote"
-            >
-              format_quote
-            </span>
-            <p className="text-base sm:text-lg text-primary font-medium leading-relaxed mb-6 italic">
-              "Finding reliable industrial-grade electrical components in bulk used to be a challenge until we started working with NCT New City Trade. Highly recommended."
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-slate-300"></div>
-              <div>
-                <p className="font-bold text-primary text-sm sm:text-base">Operations Head</p>
-                <p className="text-xs sm:text-sm text-secondary">Dhaka Construction Hub</p>
-              </div>
-            </div>
+          ))}
+          
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            {testimonialsData.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveIndex(idx)}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  idx === activeIndex ? 'bg-primary w-8' : 'bg-primary/20'
+                }`}
+              />
+            ))}
           </div>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-          <span className="text-xl sm:text-2xl md:text-3xl font-black text-primary font-headline">SHANTA</span>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black text-primary font-headline">CONCORD</span>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black text-primary font-headline">NAVANA</span>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black text-primary font-headline">ASSURANCE</span>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black text-primary font-headline">BUILDING</span>
+
+        <div className="relative mt-32 overflow-hidden py-10">
+          <div className="flex animate-marquee whitespace-nowrap gap-16 items-center">
+            {[...clientLogos, ...clientLogos].map((logo, idx) => (
+              <span 
+                key={idx} 
+                className="text-2xl sm:text-3xl md:text-4xl font-black text-primary/30 font-headline tracking-tighter hover:text-primary transition-colors cursor-default"
+              >
+                {logo}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
