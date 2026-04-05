@@ -17,7 +17,7 @@ const Hero = () => {
           <span className="inline-block px-4 py-1.5 rounded-full bg-on-tertiary-container/10 text-on-tertiary-container font-bold text-xs tracking-widest uppercase font-label">
             Premium B2B Supply Partner
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-2xl  md:text-5xl lg:text-3xl  font-headline font-extrabold text-white leading-[1.1] tracking-tight">
             Trusted B2B Hardware &amp; Construction <span className="text-on-tertiary-container">Supplier</span> in Bangladesh
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-surface-variant max-w-xl leading-relaxed">
