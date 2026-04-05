@@ -89,16 +89,44 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="relative mt-32 overflow-hidden py-10">
-          <div className="flex animate-marquee whitespace-nowrap gap-16 items-center">
-            {[...clientLogos, ...clientLogos].map((logo, idx) => (
+        <div className="relative mt-32 py-10">
+          {/* Desktop/Large View: Single Static Row */}
+          <div className="hidden lg:flex flex-wrap justify-center gap-16 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+            {clientLogos.map((logo, idx) => (
               <span
                 key={idx}
-                className="text-2xl sm:text-3xl md:text-4xl font-black text-primary/30 font-headline tracking-tighter hover:text-primary transition-colors cursor-default"
+                className="text-2xl md:text-3xl lg:text-4xl font-black text-primary font-headline tracking-tighter hover:text-primary transition-colors cursor-default"
               >
                 {logo}
               </span>
             ))}
+          </div>
+
+          {/* Mobile/Small View: Two Static Rows */}
+          <div className="flex lg:hidden flex-col gap-10 items-center opacity-40">
+            {/* Row 1: First half of logos */}
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              {clientLogos.slice(0, 4).map((logo, idx) => (
+                <span
+                  key={idx}
+                  className="text-xl sm:text-2xl font-black text-primary font-headline tracking-tighter"
+                >
+                  {logo}
+                </span>
+              ))}
+            </div>
+
+            {/* Row 2: Second half of logos */}
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              {clientLogos.slice(4).map((logo, idx) => (
+                <span
+                  key={idx}
+                  className="text-xl sm:text-2xl font-black text-primary font-headline tracking-tighter"
+                >
+                  {logo}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
