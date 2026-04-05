@@ -36,7 +36,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Trusted Partners
           </h2>
@@ -47,11 +47,10 @@ const Testimonials = () => {
           {testimonialsData.map((testimonial, idx) => (
             <div
               key={idx}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out transform flex items-center justify-center ${
-                idx === activeIndex 
-                  ? 'opacity-100 translate-x-0 scale-100' 
-                  : 'opacity-0 translate-x-12 scale-95 pointer-events-none'
-              }`}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out transform flex items-center justify-center ${idx === activeIndex
+                ? 'opacity-100 translate-x-0 scale-100'
+                : 'opacity-0 translate-x-12 scale-95 pointer-events-none'
+                }`}
             >
               <div className="max-w-3xl w-full bg-surface-container-low p-8 rounded-xl relative shadow-lg">
                 <span
@@ -64,10 +63,10 @@ const Testimonials = () => {
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.author} 
-                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20" 
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
                   />
                   <div>
                     <p className="font-bold text-primary text-sm sm:text-base">{testimonial.author}</p>
@@ -77,15 +76,14 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
-          
+
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
             {testimonialsData.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  idx === activeIndex ? 'bg-primary w-8' : 'bg-primary/20'
-                }`}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${idx === activeIndex ? 'bg-primary w-8' : 'bg-primary/20'
+                  }`}
               />
             ))}
           </div>
@@ -94,8 +92,8 @@ const Testimonials = () => {
         <div className="relative mt-32 overflow-hidden py-10">
           <div className="flex animate-marquee whitespace-nowrap gap-16 items-center">
             {[...clientLogos, ...clientLogos].map((logo, idx) => (
-              <span 
-                key={idx} 
+              <span
+                key={idx}
                 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary/30 font-headline tracking-tighter hover:text-primary transition-colors cursor-default"
               >
                 {logo}
