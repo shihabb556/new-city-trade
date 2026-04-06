@@ -43,7 +43,7 @@ const Services = () => {
           </h2>
           <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">Comprehensive Supply Solutions</h3>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {servicesData.map((service, index) => (
             <div
               key={index}

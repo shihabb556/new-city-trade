@@ -45,7 +45,7 @@ const Products = () => {
             <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-xs hover:bg-surface-container transition-colors">Safety Gear</button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {productsData.map((product, idx) => (
             <div
               key={idx}
@@ -59,14 +59,14 @@ const Products = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-on-tertiary-container mb-2 block">
+                <span className="text-[9px] font-bold uppercase tracking-widest text-on-tertiary-container mb-2 block">
                   {product.category}
                 </span>
-                <h4 className="text-[9px] sm:text-sm md:text-base font-bold text-primary mb-2">{product.title}</h4>
-                <p className="text-secondary text-[10px] sm:text-sm mb-6 line-clamp-2 leading-relaxed">
+                <h4 className="text-sm md:text-base font-bold text-primary mb-2">{product.title}</h4>
+                <p className="text-secondary text-sm mb-6 line-clamp-2 leading-relaxed">
                   {product.description}
                 </p>
-                <button className="w-full p-2 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-[8px]">
+                <button className="w-full p-2 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-sm">
                   Request Quote
                 </button>
               </div>

@@ -56,7 +56,7 @@ const Leadership = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {displayedMembers.map((leader, index) => (
             <div
               key={index}
@@ -70,9 +70,9 @@ const Leadership = () => {
                   src={leader.image}
                 />
               </div>
-              <h4 className="text-xs sm:text-sm md:text-base font-bold text-primary">{leader.name}</h4>
-              <p className="text-on-tertiary-container font-semibold text-[8px] sm:text-sm mb-4">{leader.role}</p>
-              <p className="text-secondary text-[8px] sm:text-sm leading-relaxed max-w-xs mx-auto">
+              <h4 className="text-sm md:text-base font-bold text-primary">{leader.name}</h4>
+              <p className="text-on-tertiary-container font-semibold text-sm mb-4">{leader.role}</p>
+              <p className="text-secondary text-sm leading-relaxed max-w-xs mx-auto">
                 {leader.description}
               </p>
             </div>
