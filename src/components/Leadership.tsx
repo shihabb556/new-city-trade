@@ -49,17 +49,17 @@ const Leadership = () => {
   return (
     <section className="py-24 bg-surface-container-low overflow-hidden transition-all duration-700">
       <div className="max-w-7xl mx-auto px-8 mb-16 text-center">
-        <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+        <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
           Leadership
         </h2>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">The Minds Behind the Precision</h3>
+        <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">The Minds Behind the Precision</h3>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {displayedMembers.map((leader, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-surface-container-lowest p-8 rounded-2xl text-center group transition-all duration-500 hover:shadow-xl hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${(index % 3) * 100}ms` }}
             >
@@ -70,9 +70,9 @@ const Leadership = () => {
                   src={leader.image}
                 />
               </div>
-              <h4 className="text-lg sm:text-xl font-bold text-primary">{leader.name}</h4>
-              <p className="text-on-tertiary-container font-semibold text-xs sm:text-sm mb-4">{leader.role}</p>
-              <p className="text-secondary text-xs sm:text-sm leading-relaxed max-w-xs mx-auto">
+              <h4 className="text-xs sm:text-sm md:text-base font-bold text-primary">{leader.name}</h4>
+              <p className="text-on-tertiary-container font-semibold text-[8px] sm:text-sm mb-4">{leader.role}</p>
+              <p className="text-secondary text-[8px] sm:text-sm leading-relaxed max-w-xs mx-auto">
                 {leader.description}
               </p>
             </div>
@@ -80,7 +80,7 @@ const Leadership = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <button 
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="px-8 py-3 bg-on-tertiary-container text-white font-bold rounded-lg hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-on-tertiary-container/20 group flex items-center gap-2 mx-auto"
           >

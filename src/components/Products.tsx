@@ -62,11 +62,11 @@ const Products = () => {
                 <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-on-tertiary-container mb-2 block">
                   {product.category}
                 </span>
-                <h4 className="text-xs sm:text-sm md:text-base font-bold text-primary mb-2">{product.title}</h4>
+                <h4 className="text-[9px] sm:text-sm md:text-base font-bold text-primary mb-2">{product.title}</h4>
                 <p className="text-secondary text-[10px] sm:text-sm mb-6 line-clamp-2 leading-relaxed">
                   {product.description}
                 </p>
-                <button className="w-full py-3 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-xs">
+                <button className="w-full p-2 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-[8px]">
                   Request Quote
                 </button>
               </div>

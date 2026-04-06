@@ -3,17 +3,17 @@
 const Contact = () => {
   return (
     <section className="py-24 bg-surface" id="contact">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
             <div>
-              <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+              <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
                 Contact Us
               </h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary mb-6">
+              <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary mb-6">
                 Let's Build Something Great Together
               </h3>
-              <p className="text-sm sm:text-base md:text-lg text-secondary leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-secondary leading-relaxed">
                 Our headquarters in Dhaka serve as the central hub for logistics and support. Reach out for technical inquiries or quote requests.
               </p>
             </div>
@@ -68,7 +68,7 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
-          <div className="bg-surface-container-low p-10 rounded-xl shadow-sm">
+          <div className="bg-surface-container-low p-4 sm:p-10 rounded-xl shadow-sm">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
