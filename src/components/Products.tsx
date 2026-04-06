@@ -33,19 +33,19 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
               Product Catalog
             </h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">High-Performance Inventory</h3>
+            <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">High-Performance Inventory</h3>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="px-5 py-2 rounded-lg bg-primary text-white font-semibold text-sm">All</button>
-            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-sm hover:bg-surface-container transition-colors">Tools</button>
-            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-sm hover:bg-surface-container transition-colors">Electrical</button>
-            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-sm hover:bg-surface-container transition-colors">Safety Gear</button>
+            <button className="px-5 py-2 rounded-lg bg-primary text-white font-semibold text-xs">All</button>
+            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-xs hover:bg-surface-container transition-colors">Tools</button>
+            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-xs hover:bg-surface-container transition-colors">Electrical</button>
+            <button className="px-5 py-2 rounded-lg bg-surface-container-high text-primary font-semibold text-xs hover:bg-surface-container transition-colors">Safety Gear</button>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {productsData.map((product, idx) => (
             <div
               key={idx}
@@ -62,11 +62,11 @@ const Products = () => {
                 <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-on-tertiary-container mb-2 block">
                   {product.category}
                 </span>
-                <h4 className="text-base sm:text-lg font-bold text-primary mb-2">{product.title}</h4>
-                <p className="text-secondary text-[10px] sm:text-xs mb-6 line-clamp-2 leading-relaxed">
+                <h4 className="text-xs sm:text-sm md:text-base font-bold text-primary mb-2">{product.title}</h4>
+                <p className="text-secondary text-[10px] sm:text-sm mb-6 line-clamp-2 leading-relaxed">
                   {product.description}
                 </p>
-                <button className="w-full py-3 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-sm">
+                <button className="w-full py-3 bg-surface-container text-primary font-bold rounded-lg group-hover:bg-on-tertiary-container group-hover:text-white transition-colors text-xs">
                   Request Quote
                 </button>
               </div>

@@ -38,18 +38,18 @@ const Services = () => {
     <section className="py-24 bg-surface-container-low" id="services">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Expertise
           </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">Comprehensive Supply Solutions</h3>
+          <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">Comprehensive Supply Solutions</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <div
               key={index}
               className="bg-surface-container-lowest p-8 rounded-xl shadow-sm transition-all hover:translate-y-[-4px] group"
             >
-              <div className="w-14 h-14 bg-surface-container flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
+              <div className="w-10 h-10 bg-surface-container flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
                 <span
                   className="material-symbols-outlined text-primary group-hover:text-white"
                   data-icon={service.icon}
@@ -57,8 +57,8 @@ const Services = () => {
                   {service.icon}
                 </span>
               </div>
-              <h4 className="text-lg sm:text-xl font-bold text-primary mb-3">{service.title}</h4>
-              <p className="text-secondary text-xs sm:text-sm leading-relaxed">{service.description}</p>
+              <h4 className="text-xs sm:text-sm md:text-base font-bold text-primary mb-3">{service.title}</h4>
+              <p className="text-xs sm:text-sm  text-secondary leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
