@@ -30,10 +30,10 @@ const FAQ = () => {
     <section className="py-24 bg-surface-container-low">
       <div className="max-w-4xl mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+          <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Support
           </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">Frequently Asked Questions</h3>
+          <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">Frequently Asked Questions</h3>
         </div>
         <div className="space-y-4">
           {faqData.map((faq, index) => (

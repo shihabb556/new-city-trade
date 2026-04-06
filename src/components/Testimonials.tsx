@@ -37,10 +37,10 @@ const Testimonials = () => {
     <section className="py-24 bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center">
-          <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
+          <h2 className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-on-tertiary-container mb-4 font-label">
             Trusted Partners
           </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary">What Our Clients Say</h3>
+          <h3 className="text-md sm:text-lg md:text-xl font-headline font-bold text-primary">What Our Clients Say</h3>
         </div>
 
         <div className="relative h-[400px] mb-20 flex items-center justify-center">
@@ -59,7 +59,7 @@ const Testimonials = () => {
                 >
                   format_quote
                 </span>
-                <p className="text-base sm:text-lg text-primary font-medium leading-relaxed mb-8 italic">
+                <p className="text-xs sm:text-sm md:text-base text-primary font-medium leading-relaxed mb-8 italic">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
