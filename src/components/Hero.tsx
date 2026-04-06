@@ -24,11 +24,11 @@ const Hero = () => {
             Delivering high-quality industrial tools, building materials, and power tools to contractors and developers nationwide with precision and reliability.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="industrial-gradient text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-xs sm:text-base md:text-lg hover:opacity-90 transition-all">
-              Explore Products
+            <button className="cursor-pointer industrial-gradient text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-xs sm:text-base md:text-lg hover:opacity-90 transition-all hover:scale-105 hover:opacity-90 transition-all duration-300 ease-in-out">
+              <a href="#products">Explore Products</a>
             </button>
-            <button className="border border-outline-variant/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-xs sm:text-base md:text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
-              Contact Us
+            <button className="cursor-pointer border border-outline-variant/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-xs sm:text-base md:text-lg hover:bg-white/10 transition-all backdrop-blur-sm hover:scale-105 hover:opacity-90 transition-all duration-300 ease-in-out">
+              <a href="#contact">Contact Us</a>
             </button>
           </div>
         </div>
